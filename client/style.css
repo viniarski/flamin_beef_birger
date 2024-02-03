@@ -1,4 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
 * {
   background-color: black;
   color: white;
+  font-family: "Alata", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* logo */
+.name {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: 5rem;
+  margin-left: 7rem;
+  background: none;
+}
+
+.flame {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 5rem;
+}
+
+/* navigation menu */ 
+.top-nav-menu {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-right: 7rem;
+  background: none;
+}
+
+.top-nav {
+  margin: 1rem;
+  text-decoration: none;
+  background: none;
+}
+
+/* main pic */
+.sec-1 {
+  background-image: url('./public/assets/images/main.avif');
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* about section */
+.sec-2 {
+  background-image: url('./public/assets/images/about.avif');
+  background-size: cover;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* footer section */
+
+footer {
+  position: relative;
+  text-align: center;
+}
+
+footer p {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+footer img {
+  display: block;
+  margin: 0 auto;
 }
