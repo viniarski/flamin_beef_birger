@@ -14,40 +14,87 @@
     <title>Flamin' Beef Burger</title>
   </head>
   <body>
-    <header>
-      <h1 class="name">flamin beef burger</h1>
-      <nav>
-        <a id="nav_1" href="#">home</a>
-        <a id="nav_2" href="#about">about</a>
-        <a id="nav_3" href="#menu">menu</a>
-        <a id="nav_4" href="#booking">booking</a>
+    <header class="sec-1">
+      <div class="logo-container">
+        <img src="./public/assets/graphics/logo.png" alt="logo flamin beef burger" class="logo"/>
+      </div>
+      <nav class="top-nav-menu">
+        <a id="top-nav-1" class="top-nav" href="#"></a>
+        <a id="top-nav-2" class="top-nav" href="#about">about us</a>
+        <a id="top-nav-3" class="top-nav" href="#menu">menu</a>
+        <a id="top-nav-4" class="top-nav" href="#booking">booking</a>
       </nav>
     </header>
 
     <main>
-      <section id='about'>
-        <div>
-          <h2>about us</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            repudiandae, quaerat, quas illo est minima voluptates optio vel quia
-            fugit nostrum, veniam suscipit sint ex repellendus numquam nulla
-            laborum. Odit!
-          </p>
+      <section id="about" class="sec-2">
+        <div class="about-parent">
+          <div class="about-div1"></div>
+          <div class="about-div2">
+            <h2>about us</h2>
+            <br />
+            <p>
+              Flamin' Beef Burger embodies the perfect union of passion and
+              flavor! More than just a restaurant, we're a vibrant celebration
+              of bold tastes, premium ingredients, and the sheer joy of savoring
+              delicious moments.
+            </p>
+            <br />
+            <p>
+              Our unwavering commitment to excellence is evident in every
+              mouthwatering bite, where premium beef burgers are meticulously
+              flame-grilled to absolute perfection. Dive into our extensive
+              menu, offering a delightful mix of classic favorites and inventive
+              creations designed to cater to every palate. We extend our
+              commitment beyond the kitchen, supporting local farmers and
+              businesses to give back to the community.
+            </p>
+            <br />
+            <p>
+              Join the Flamin' family and allow our skilled chefs' passionate
+              craftsmanship to guide you on a remarkable journey of flavors.
+              Discover the warmth, distinctive taste, and unbridled joy that
+              define the essence of Flamin' Beef Burger - where each bite is not
+              just a meal but a genuine celebration!
+            </p>
+          </div>
         </div>
       </section>
-      <section id="menu">
+      <section id="menu" class="sec-3">
         <div>
           <h2>menu</h2>
         </div>
       </section>
-      <section id="booking">
+      <section id="booking" class="sec-4">
         <div>
           <h2>booking</h2>
         </div>
+        <form id="booking">
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Please enter name"
+            name="name"
+            required
+          />
+          <label for="phone"></label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Please enter phone number"
+            name="phone"
+            required
+          ></input>
+          <button id="submit" type="submit">Submit</button>
+        </form>
       </section>
     </main>
 
-    <footer>Flamin Beef Burger &copy; 2024</footer>
+    <footer>
+      <p>Flamin Beef Burger &copy; 2024</p>
+      <img src="./public/assets/graphics/bottom-flames.png" />
+    </footer>
   </body>
 </html>
+
