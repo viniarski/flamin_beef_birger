@@ -9,6 +9,7 @@
   overflow-x: hidden;
 }
 
+
 /* logo */
 
 .logo-container {
@@ -38,6 +39,7 @@
   position: absolute;
   right: 0;
   top: 0;
+
 }
 
 .top-nav {
@@ -48,6 +50,7 @@
 
 /* main pic */
 .sec-1 {
+
   background-image: url("./public/assets/images/main.avif");
   background-size: cover;
   background-position: center;
@@ -55,11 +58,13 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
+
   width: 100vw;
   height: 100vh;
 }
 
 /* about section */
+
 
 .sec-2 {
   background-color: rgb(55, 55, 55);
@@ -105,12 +110,14 @@
   height: 60svh;
 }
 
+
 /* footer section */
 
 footer {
   position: relative;
   text-align: center;
   background-color:  black;
+
 }
 
 footer p {
