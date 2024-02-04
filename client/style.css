@@ -1,44 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 * {
-  background-color: black;
   color: white;
   font-family: "Alata", sans-serif;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 /* logo */
-.name {
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 5rem;
-  margin-left: 7rem;
+
+.logo-container {
+  width: 30svw;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
   background: none;
 }
 
-.flame {
-  width: 5rem;
-  height: 5rem;
-  margin-top: 5rem;
+.logo {
+  background-color: none;
 }
 
-/* navigation menu */ 
+/* navigation menu */
 .top-nav-menu {
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 5rem;
-  margin-right: 7rem;
+  margin-top: 6rem;
+  margin-right: 5rem;
   background: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+
 }
 
 .top-nav {
@@ -49,21 +50,64 @@ header{
 
 /* main pic */
 .sec-1 {
-  background-image: url('./public/assets/images/main.avif');
+
+  background-image: url("./public/assets/images/main.avif");
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+
   width: 100vw;
   height: 100vh;
 }
 
 /* about section */
+
+
 .sec-2 {
-  background-image: url('./public/assets/images/about.avif');
+  background-color: rgb(55, 55, 55);
+  /* height: 100svh; */
+}
+
+.about-parent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.about-div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-image: url("./public/assets/images/about.avif");
   background-size: cover;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  background-position: center;
+  height: 100%;
+}
+.about-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 3rem;
+  text-align: justify;
+}
+
+.about-div2 h2 {
+  text-transform: uppercase;
+}
+
+/* menu section */
+
+.sec-3 {
+  background-color: black;
+  height: 100svh;
+}
+
+/* booking section */
+
+.sec-4 {
+  background-color:  rgb(55, 55, 55);
+  height: 60svh;
 }
 
 
@@ -72,6 +116,8 @@ header{
 footer {
   position: relative;
   text-align: center;
+  background-color:  black;
+
 }
 
 footer p {
@@ -89,3 +135,27 @@ footer img {
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 1150px) {
+  .about-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .about-div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 75svh;
+  }
+  .about-div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-div1 {
+    height: 40svh;
+  }
+}
+
