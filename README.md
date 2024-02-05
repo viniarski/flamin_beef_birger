@@ -6,6 +6,8 @@ Week project by Michal, Yonas & Mauro
 - As a user, I want to look at my confirmed bookings.
 - As a user, I want to edit or cancel bookings.
 
+Check what we did and how we did it!
+
 Figma:
 https://www.figma.com/file/8HgncyxbbvSEkV2nR6Dbrg/Untitled?type=design&node-id=0%3A1&mode=design&t=qBcpyBKtSq3XWUB5-1
 
