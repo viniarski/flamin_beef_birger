@@ -1,8 +1,8 @@
 const form = document.getElementById('booking')
-const baseURL = import.meta.env.VITE_ServerURL
+// const baseURL = import.meta.env.VITE_ServerURL
 
-function handleBooking(e) {
-    e.preventDefault()
+ form.addEventListener('submit', async function handleBooking(event) {
+    event.preventDefault()
 
     const formData = new FormData(form)
     const bookings = Object.fromEntries(formData)
@@ -10,7 +10,7 @@ function handleBooking(e) {
     console.log(bookings)
     // if (bookings.name == '' || bookings.phoneNo == '')
 
-    fetch(`${baseURL}/booking`, {
+    const response = await fetch(`http://localhost:8080/booking`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -18,6 +18,11 @@ function handleBooking(e) {
         body: JSON.stringify({bookings})
     })
 
-}
+    if (response.ok) {
+        console.log('OKAY')
+    } else {
+        console.error('ERROR')
+    }
+})
 
-form.addEventListener('click', handleBooking)
+// form.addEventListener('submit', async function handleBooking)
