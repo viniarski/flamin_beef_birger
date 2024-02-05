@@ -9,7 +9,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <title>Flamin' Beef Burger</title>
   </head>
   <body>
@@ -25,11 +25,13 @@
         <a id="top-nav-1" class="top-nav" href="#"></a>
         <a id="top-nav-2" class="top-nav" href="#about">about us</a>
         <a id="top-nav-3" class="top-nav" href="#menu">menu</a>
-        <a id="top-nav-4" class="top-nav" href="#booking">booking</a>
+        <a id="top-nav-4" class="top-nav" href="#booking-section">booking</a>
       </nav>
     </header>
 
     <main>
+      <!-- about section - gallery -->
+
       <section id="about" class="sec-2">
         <div class="about-parent">
           <div class="about-div1"></div>
@@ -63,22 +65,27 @@
           </div>
         </div>
       </section>
+
+      <!-- menu section - gallery -->
+
       <section id="menu" class="sec-3">
         <div>
           <h2>menu</h2>
         </div>
       </section>
-      <section id="booking" class="sec-4">
-        <div>
-          <h2>booking</h2>
-        </div>
-        <form id="booking">
+
+      <!-- booking section -->
+
+      <section id="booking-section" class="sec-4">
+        <h2 class="title-booking">booking</h2>
+        <form id="booking" class="booking-form">
           <label for="name"></label>
           <input
             type="text"
             id="name"
             placeholder="Name"
             name="name"
+            class="booking-input"
             required
           />
           <label for="surname"></label>
@@ -87,6 +94,7 @@
             id="surname"
             placeholder="Surname"
             name="surname"
+            class="booking-input"
             required
           />
           <label for="phone"></label>
@@ -95,40 +103,46 @@
             id="phone"
             placeholder="Phone number"
             name="phone"
+            class="booking-input"
             required
           />
+
           <label for="email"></label>
           <input
             type="email"
             id="email"
             placeholder="Email"
             name="email"
+            class="booking-input"
             required
           />
+
+          <select name="time" id="time" class="booking-input">
+            <option value="0" disable selected>Time</option>
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+            <option value="17:00">17:00</option>
+            <option value="17:30">17:30</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+          </select>
+
+          <input type="date" id="date" name="date" class="booking-input" />
+
           <div>
-            <select name="time" id="time">
-              <option value="0" disable selected>Time</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-              <option value="18:00">18:00</option>
-              <option value="18:30">18:30</option>
-              <option value="19:00">19:00</option>
-              <option value="19:30">19:30</option>
-              <option value="20:00">20:00</option>
-            </select>
+            <button id="submit" type="submit" class="booking-submit">
+              Submit
+            </button>
           </div>
-          <div>
-            <input type="date" />
-          </div>
-          <button id="submit" type="submit">Submit</button>
         </form>
       </section>
     </main>
 
     <footer>
-      <p>Flamin' Beef Burger<br>&copy; 2024</p>
+      <p>Flamin' Beef Burger<br />&copy; 2024</p>
       <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
     </footer>
   </body>
