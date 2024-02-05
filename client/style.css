@@ -117,23 +117,26 @@ footer {
   position: relative;
   text-align: center;
   background-color:  black;
-
 }
 
 footer p {
   position: absolute;
-  bottom: 1.6rem;
+margin-top: 150px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   background: none;
   color: black;
-  font-size: 1.2rem;
+  font-size: 0.7rem;
 }
 
 footer img {
   display: block;
   margin: 0 auto;
+}
+
+.flames {
+  height: 20svh;
 }
 
 @media (max-width: 1150px) {
