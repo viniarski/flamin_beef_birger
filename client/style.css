@@ -156,6 +156,7 @@ footer img {
 #maps {
   position: relative;
   border-radius: 1rem;
+  border: 3px solid gray;
 }
 
 #flameDiv {
