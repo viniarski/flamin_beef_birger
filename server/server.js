@@ -14,6 +14,15 @@ app.get('/', (req, res) => {
     res.status(200)
 })
 
+app.get('/booking', (req, res) => {
+    try {
+        let bookings = deb.prepare(`SELECT * FROM bookings`).all()
+        res.status(200).json(bookings)
+    } catch(err) {
+        res.status(500).json({error: err})
+    }
+})
+
 app.post('/booking', (req, res) => {
     try {
         const name = req.body.bookings.name
@@ -25,6 +34,8 @@ app.post('/booking', (req, res) => {
         // console.log(name, surname, phone, email, time, date)
 
         const newBooking = db.prepare(`INSERT INTO bookings (name, surname, phoneNo, email, time, date) VALUES (?, ?, ?, ?, ?, ?)`).run(name, surname, phone, email, time, date)
+    
+        res.status(200).json(newBooking)
     } catch (err) {
         res.status(500).json({error: err})
     }

@@ -110,13 +110,21 @@
   height: 60svh;
 }
 
+.formEntries {
+  display: flex;
+}
+
 
 /* footer section */
 
 footer {
+  padding-top: 2rem;
   position: relative;
+  display: flex;
+  justify-content: space-around;
   text-align: center;
   background-color:  black;
+  height: 55vh;
 }
 
 footer p {
@@ -130,6 +138,12 @@ margin-top: 150px;
   font-size: 0.7rem;
 }
 
+.footerHeaders {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  margin-bottom: 1rem;
+}
+
 footer img {
   display: block;
   margin: 0 auto;
@@ -137,6 +151,27 @@ footer img {
 
 .flames {
   height: 20svh;
+}
+
+#maps {
+  position: relative;
+  border-radius: 1rem;
+}
+
+#flameDiv {
+  position: absolute;
+  bottom: 0%;
+  /* gap: 2rem; */
+}
+
+#footerDetails {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.footerTxt h3{
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 1150px) {
