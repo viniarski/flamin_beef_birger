@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
@@ -16,7 +15,11 @@
   <body>
     <header class="sec-1">
       <div class="logo-container">
-        <img src="./public/assets/graphics/logo.png" alt="logo flamin beef burger" class="logo"/>
+        <img
+          src="./public/assets/graphics/logo.png"
+          alt="logo flamin beef burger"
+          class="logo"
+        />
       </div>
       <nav class="top-nav-menu">
         <a id="top-nav-1" class="top-nav" href="#"></a>
@@ -74,19 +77,52 @@
           <input
             type="text"
             id="name"
-            placeholder="Please enter name"
+            placeholder="Name"
             name="name"
+            required
+          />
+          <label for="surname"></label>
+          <input
+            type="tel"
+            id="surname"
+            placeholder="Surname"
+            name="surname"
             required
           />
           <label for="phone"></label>
           <input
             type="tel"
             id="phone"
-            placeholder="Please enter phone number"
+            placeholder="Phone number"
             name="phone"
             required
-          ></input>
-          <button id="submit" type="submit">Submit</button>
+          />
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          <div>
+            <select name="time" id="time">
+              <option value="0" disable selected>Time</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+          </div>
+          <div>
+            <input type="date" />
+          </div>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>
@@ -97,4 +133,3 @@
     </footer>
   </body>
 </html>
-
