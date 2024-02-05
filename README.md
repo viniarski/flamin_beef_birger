@@ -1,4 +1,4 @@
-# Flamin Beef Burger - Restaurant Booking Website
+# Flamin' Beef Burger - Restaurant Booking Website
 Week project by Michal, Yonas & Mauro
 ## User Story
 - As a user, I want to book a timeslot for the retaurant through a form.
