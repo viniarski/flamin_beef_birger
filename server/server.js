@@ -16,8 +16,15 @@ app.get('/', (req, res) => {
 
 app.post('/booking', (req, res) => {
     try {
-        console.log(req.body)
+        const name = req.body.bookings.name
+        const surname = req.body.bookings.surname
+        const phone = req.body.bookings.phone
+        const email = req.body.bookings.email
+        const time = req.body.bookings.time
+        const date = req.body.bookings.date
+        // console.log(name, surname, phone, email, time, date)
 
+        const newBooking = db.prepare(`INSERT INTO bookings (name, surname, phoneNo, email, time, date) VALUES (?, ?, ?, ?, ?, ?)`).run(name, surname, phone, email, time, date)
     } catch (err) {
         res.status(500).json({error: err})
     }

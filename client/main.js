@@ -18,6 +18,7 @@ function handleBooking(e) {
         body: JSON.stringify({bookings})
     })
 
+
 }
 
 form.addEventListener('submit', handleBooking)
