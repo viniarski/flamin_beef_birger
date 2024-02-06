@@ -46,6 +46,11 @@
   background: none;
 }
 
+.top-nav:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
 /* hamburger menu */
 
 #hamburger-nav {
@@ -86,6 +91,11 @@
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.menu-links a:hover {
+  color: orange;
+  text-decoration: underline;
 }
 
 .menu-links li {
@@ -240,7 +250,6 @@ footer {
   height: 50svh;
   margin: 0;
   border-top: rgb(225, 225, 225) solid 2px;
-
 }
 
 footer p {
@@ -293,7 +302,6 @@ footer a {
   font-size: 1rem;
   text-decoration: none;
 }
-
 
 footer a:hover {
   color: orange;
