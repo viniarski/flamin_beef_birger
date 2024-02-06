@@ -152,6 +152,81 @@ h2 {
   text-transform: uppercase;
 }
 
+/* CUSTOMER REVIEW SECTION */
+
+#customerReview {
+  height: 33svh;
+  background-color: rgb(55, 55, 55);
+  text-align: center;
+}
+
+#reviewDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 20svw;
+}
+
+#reviewForm input, textarea{
+  color: rgb(112, 112, 112);
+  margin: 0.5rem 0;
+  /* font-size: 1.2rem; */
+  padding: 5px;
+}
+
+.dbReviewDiv {
+  border: #ffc700 solid 2px;
+}
+
+.reviewRating::before {
+ content: '★';
+}
+
+/* STAR CSS CODE */
+
+.rate {
+  /* float: left; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
 /* menu section */
 
 .sec-3 {

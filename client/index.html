@@ -24,6 +24,7 @@
       <!-- top nav menu -->
       <nav class="top-nav-menu">
         <a id="top-nav-2" class="top-nav" href="#about">about us</a>
+        <a class="top-nav" id href="#customerReview">Reviews</a>
         <a id="top-nav-3" class="top-nav" href="#menu">menu</a>
         <a id="top-nav-4" class="top-nav" href="#booking-section">booking</a>
       </nav>
@@ -77,6 +78,45 @@
               define the essence of Flamin' Beef Burger - where each bite is not
               just a meal but a genuine celebration!
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMER REVIEW SECTION -->
+      <section id="customerReview">
+        <h2>Customer Reviews</h2>
+        <div id="reviewDiv">
+          <div>
+            <form id="reviewForm">
+              <h3>Leave a review!</h3>
+              <label for="reviewName"></label>
+              <input type="text" name="reviewName" class="reviewName" placeholder="Name" required>
+
+              <label for="reviewMsg"></label>
+              <textarea type="text" name="reviewMsg" id="reviewMsg" placeholder="Leave your message here!" required></textarea>
+
+              <!-- STAR RATINGS -->
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value=5 />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value=4 />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value=3 />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value=2 />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value=1 />
+                <label for="star1" title="text">1 star</label>
+              </div>
+
+              <button type="submit" class="booking-submit">Submit</button>
+            </form>
+          </div>
+          <div>
+            <h3>Reviews</h3>
+          </div>
+          <div id="getReviewsDiv">
+            
           </div>
         </div>
       </section>
