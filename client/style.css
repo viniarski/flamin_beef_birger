@@ -155,7 +155,7 @@ h2 {
 /* CUSTOMER REVIEW SECTION */
 
 #customerReview {
-  height: 33svh;
+  height: 40svh;
   background-color: rgb(55, 55, 55);
   text-align: center;
 }
@@ -177,7 +177,7 @@ h2 {
 #reviewForm input, textarea{
   color: rgb(112, 112, 112);
   margin: 0.5rem 0;
-  /* font-size: 1.2rem; */
+  font-size: 1.2rem;
   padding: 5px;
 }
 
@@ -189,11 +189,25 @@ h2 {
   align-items: center;
   gap: 0.5rem;
   max-width: 40rem;
+  text-align: center;
 }
 
 .dbReviewDiv {
   border: #ffc700 solid 2px;
+  border-radius: 1rem;
   padding: 0.2rem 0.5rem;
+}
+
+.reviewName {
+  text-decoration: underline;
+}
+
+.reviewMsg {
+  max-width: 15rem;
+}
+
+.reviewRating {
+  color: #ffc700;
 }
 
 .reviewRating::before {
@@ -212,7 +226,7 @@ h2 {
 }
 .rate:not(:checked) > input {
   position:absolute;
-  top:-9999px;
+  left:-9999px;
 }
 .rate:not(:checked) > label {
   float:right;
