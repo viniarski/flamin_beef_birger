@@ -185,7 +185,8 @@ footer img {
 #maps {
   position: relative;
   border-radius: 1rem;
-  border: 3px solid gray;
+  border: 3px solid white;
+  margin-bottom: 1rem;
 }
 
 #flameDiv {
@@ -200,8 +201,14 @@ footer img {
   gap: 3rem;
 }
 
-.footerTxt h3{
+.footerTxt a{
   margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.footerTxt a:hover {
+  text-decoration: underline;
+  color: orange;
 }
 
 @media (max-width: 1150px) {
