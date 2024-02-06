@@ -77,73 +77,82 @@
       <!-- booking section -->
 
       <section id="booking-section" class="sec-4">
-        <h2 class="title-booking">booking</h2>
-        <form id="booking" class="booking-form">
-          <label for="name"></label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Name"
-            name="name"
-            class="booking-input"
-            required
-          />
-          <label for="surname"></label>
-          <input
-            type="tel"
-            id="surname"
-            placeholder="Surname"
-            name="surname"
-            class="booking-input"
-            required
-          />
-          <label for="phone"></label>
-          <input
-            type="tel"
-            id="phone"
-            placeholder="Phone number"
-            name="phone"
-            class="booking-input"
-            required
-          />
-          <label for="email"></label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            name="email"
-            class="booking-input"
-            required
-          />
+        <div>
+          <h2 class="title-booking">booking</h2>
+          <form id="booking" class="booking-form">
+            <label for="name"></label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              name="name"
+              class="booking-input"
+              required
+            />
+            <label for="surname"></label>
+            <input
+              type="tel"
+              id="surname"
+              placeholder="Surname"
+              name="surname"
+              class="booking-input"
+              required
+            />
+            <label for="phone"></label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Phone number"
+              name="phone"
+              class="booking-input"
+              required
+            />
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="email"
+              class="booking-input"
+              required
+            />
 
-          <select name="time" id="time" class="booking-input">
-            <option value="0" disable selected>Time</option>
-            <option value="16:00">16:00</option>
-            <option value="16:30">16:30</option>
-            <option value="17:00">17:00</option>
-            <option value="17:30">17:30</option>
-            <option value="18:00">18:00</option>
-            <option value="18:30">18:30</option>
-            <option value="19:00">19:00</option>
-            <option value="19:30">19:30</option>
-            <option value="20:00">20:00</option>
-          </select>
+            <select name="time" id="time" class="booking-input">
+              <option value="0" disable selected>Time</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
 
-          <input type="date" id="date" name="date" class="booking-input" />
-          <div>
-            <button id="submit" type="submit" class="booking-submit">
-              Submit
-            </button>
-          </div>
-        </form>
+            <input type="date" id="date" name="date" class="booking-input" />
+            <div>
+              <button id="submit" type="submit" class="booking-submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="booking-reserve">
+          <p>
+            Reserve your seat today for an unforgettable dining experience.
+            Don't miss out on the opportunity to enjoy our mouthwatering burgers
+            and more!
+          </p>
+          <img src="./public/assets/images/grill.avif" alt="grill" />
+        </div>
       </section>
     </main>
 
     <footer>
       <div id="flameDiv">
-        <p>Flamin' Beef Burger<br>&copy; 2024</p>
-        <!-- <p>All Rights Reserved</p> -->
-      <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
+        <p>Flamin' Beef Burger<br />All Rights Reserved.&copy; 2024</p>
+        <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
       </div>
       <div id="footerDetails">
         <div class="footerTxt">
