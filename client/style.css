@@ -193,6 +193,10 @@ input::placeholder {
   color: rgb(112, 112, 112);
 }
 
+option {
+  color: rgb(112, 112, 112);
+}
+
 .booking-submit {
   width: 150px;
   color: black;
@@ -230,11 +234,13 @@ footer {
   padding-top: 2rem;
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   background-color: black;
-  height: 40svh;
+  height: 50svh;
   margin: 0;
+  border-top: rgb(225, 225, 225) solid 2px;
+
 }
 
 footer p {
@@ -268,6 +274,11 @@ footer img {
   bottom: 0;
 }
 
+#flameDiv p {
+  top: -10px;
+  font-weight: bold;
+}
+
 #footerDetails {
   display: flex;
   justify-content: space-around;
@@ -283,13 +294,21 @@ footer a {
   text-decoration: none;
 }
 
+
+footer a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
 .maps {
   position: relative;
   border-radius: 1rem;
   height: 250px;
   width: 450px;
-  margin-bottom: 50px;
   margin-top: 30px;
+  border-radius: 1rem;
+  border: 3px solid white;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1150px) {
