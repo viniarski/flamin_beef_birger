@@ -72,7 +72,7 @@ async function fetchReviews() {
 // DISPLAY REVIEWS AFTER FETCH
 async function displayReviews() {
     let reviews = await fetchReviews()
-
+    console.log(reviews)
     getReviewsDiv.innerHTML = ''
 
     reviews.forEach(review => {
@@ -90,6 +90,8 @@ async function displayReviews() {
 
       rating.textContent = review.rating
       rating.setAttribute('class', 'reviewRating')
+
+
 
       reviewDiv.appendChild(nameTxt)
       reviewDiv.appendChild(msgTxt)

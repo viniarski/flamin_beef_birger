@@ -164,6 +164,9 @@ h2 {
   display: flex;
   justify-content: space-evenly;
 }
+#reviewFormDiv {
+  padding: 0 15rem;
+}
 
 #reviewForm {
   display: flex;
@@ -178,8 +181,19 @@ h2 {
   padding: 5px;
 }
 
+#getReviewsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 40rem;
+}
+
 .dbReviewDiv {
   border: #ffc700 solid 2px;
+  padding: 0.2rem 0.5rem;
 }
 
 .reviewRating::before {
