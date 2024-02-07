@@ -4,7 +4,6 @@ Week project by Michal, Yonas & Mauro
 - As a user, I want to book a timeslot for the retaurant through a form.
 - As a user, I want confirmation that the booking has been successful.
 - As a user, I want to look at my confirmed bookings.
-- As a user, I want to edit or cancel bookings.
 
 Check what we did and how we did it!
 
