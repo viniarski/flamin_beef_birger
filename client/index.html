@@ -90,31 +90,42 @@
             <form id="reviewForm">
               <h3>Leave a review!</h3>
               <label for="reviewFormName"></label>
-              <input type="text" name="reviewFormName" class="reviewFormName" placeholder="Name" required>
+              <input
+                type="text"
+                name="reviewFormName"
+                class="reviewFormName"
+                placeholder="Name"
+                required
+              />
 
               <label for="reviewMsg"></label>
-              <textarea type="text" name="reviewMsg" id="reviewMsg" placeholder="Leave your message here!" required></textarea>
+              <textarea
+                type="text"
+                name="reviewMsg"
+                id="reviewMsg"
+                placeholder="Leave your message here!"
+                required
+              ></textarea>
 
               <!-- STAR RATINGS -->
               <div class="rate">
-                <input type="radio" id="star5" name="rate" value=5 />
+                <input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value=4 />
+                <input type="radio" id="star4" name="rate" value="4" />
                 <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value=3 />
+                <input type="radio" id="star3" name="rate" value="3" />
                 <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value=2 />
+                <input type="radio" id="star2" name="rate" value="2" />
                 <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value=1 />
+                <input type="radio" id="star1" name="rate" value="1" />
                 <label for="star1" title="text">1 star</label>
               </div>
 
               <button type="submit" class="booking-submit">Submit</button>
             </form>
           </div>
-          
-          <div id="getReviewsDiv">
-          </div>
+
+          <div id="getReviewsDiv"></div>
         </div>
       </section>
 
@@ -125,18 +136,34 @@
           <h2>menu</h2>
         </div>
         <div class="full-img">
-          <img src="images/img.project/00.jpg">
-      </div>
-      <div class="img-gallery">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/1.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/2.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/33.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/6.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/5.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/7.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/77.jpg">
-           <img src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/8.jpg">
-      </div>
+          <img src="images/img.project/00.jpg" />
+        </div>
+        <div class="img-gallery">
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/1.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/2.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/33.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/6.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/5.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/7.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/77.jpg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/8.jpg"
+          />
+        </div>
       </section>
 
       <!-- booking section -->
@@ -210,24 +237,24 @@
             and more!
           </p>
         </div>
+        <div id="notice-display"></div>
       </section>
     </main>
 
     <footer>
       <div id="flameDiv">
-
         <p>Flamin' Beef Burger<br />All Rights Reserved.&copy; 2024</p>
         <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
       </div>
       <div id="footerDetails">
         <iframe
-        id="maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.3476528610902!2d1.2908591262580549!3d52.63002111216108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3a1becaa7a1%3A0x7fb341a9b7b7daa!2sTech%20Educators%20Ltd!5e1!3m2!1sen!2suk!4v1707141285983!5m2!1sen!2suk"
-        style="border: 0"
-        allowfullscreen=""
-        class="maps"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+          id="maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.3476528610902!2d1.2908591262580549!3d52.63002111216108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3a1becaa7a1%3A0x7fb341a9b7b7daa!2sTech%20Educators%20Ltd!5e1!3m2!1sen!2suk!4v1707141285983!5m2!1sen!2suk"
+          style="border: 0"
+          allowfullscreen=""
+          class="maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="footerTxt">
           <h2 class="footerHeaders">Where to find us!</h2>
@@ -265,7 +292,6 @@
           <h3><a href="#">Insurance Policy Details</a></h3>
         </div>
       </div>
-      
     </footer>
   </body>
 </html>

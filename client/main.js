@@ -19,27 +19,60 @@ function handleBooking(e) {
     },
     body: JSON.stringify({ bookings }),
   });
+
+  displayConfirmation(bookings);
+}
+
+// confirmation notice
+
+form.addEventListener('submit', handleBooking);
+
+const noticeDisplay = document.getElementById('notice-display');
+
+function displayConfirmation(bookings) {
+  let noticeDiv = document.createElement('div');
+  let confirmationNotice = document.createElement('p');
+  let closeButton = document.createElement('button');
+
+  noticeDiv.setAttribute('class', 'notice-div');
+  confirmationNotice.setAttribute('class', 'confirmation-notice');
+  closeButton.setAttribute('class', 'close-button');
+
+  confirmationNotice.innerHTML = `
+  Flamin' Beef Burger<br>
+  🍔 🍔 🍔 <br>
+  Reservation details:<br><br>
+  &#8227; Name: ${bookings.name} ${bookings.surname}<br>
+  &#8227; Time: ${bookings.time}<br>
+  &#8227; Date: ${bookings.date}<br>`;
+  closeButton.innerHTML = `Close`;
+
+  noticeDisplay.appendChild(noticeDiv);
+  noticeDiv.appendChild(confirmationNotice);
+  noticeDiv.appendChild(closeButton);
 }
 
 function handleReview(e) {
-    e.preventDefault()
+  e.preventDefault();
 
-    const formData = new FormData(reviewForm);
-    const reviews = Object.fromEntries(formData);
+  const formData = new FormData(reviewForm);
+  const reviews = Object.fromEntries(formData);
 
-    // GETTING DATE WHEN SUBMITTED
-    const submitDate = new Date()
-    const date = `${submitDate.getUTCDate()}/${(submitDate.getUTCMonth() + 1)}/${submitDate.getUTCFullYear()}`
-    
-    console.log(reviews, date)
-    fetch(`${baseURL}/review`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ reviews, date })
-    });
-    displayReviews()
+  // GETTING DATE WHEN SUBMITTED
+  const submitDate = new Date();
+  const date = `${submitDate.getUTCDate()}/${
+    submitDate.getUTCMonth() + 1
+  }/${submitDate.getUTCFullYear()}`;
+
+  console.log(reviews, date);
+  fetch(`${baseURL}/review`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ reviews, date }),
+  });
+  displayReviews();
 }
 
 // flamin' 🍔 hamburger menu!
@@ -64,48 +97,46 @@ function toggleMenu() {
 
 // FETCH REVIEWS FROM DB
 async function fetchReviews() {
-    const reviews = await fetch(`${baseURL}/review`)
-    let result = await reviews.json()
-    return result
-  }
+  const reviews = await fetch(`${baseURL}/review`);
+  let result = await reviews.json();
+  return result;
+}
 
 // DISPLAY REVIEWS AFTER FETCH
 async function displayReviews() {
-    let reviews = await fetchReviews()
-    console.log(reviews)
-    getReviewsDiv.innerHTML = ''
+  let reviews = await fetchReviews();
+  console.log(reviews);
+  getReviewsDiv.innerHTML = '';
 
-    reviews.forEach(review => {
-      let reviewDiv = document.createElement('div')
-      let nameTxt = document.createElement('h3')
-      let msgTxt = document.createElement('p')
-      let rating = document.createElement('p')
-      let dateTxt = document.createElement('p')
+  reviews.forEach((review) => {
+    let reviewDiv = document.createElement('div');
+    let nameTxt = document.createElement('h3');
+    let msgTxt = document.createElement('p');
+    let rating = document.createElement('p');
+    let dateTxt = document.createElement('p');
 
-      reviewDiv.setAttribute('class', 'dbReviewDiv')
-      nameTxt.textContent = review.name
-      nameTxt.setAttribute('class', 'reviewName')
+    reviewDiv.setAttribute('class', 'dbReviewDiv');
+    nameTxt.textContent = review.name;
+    nameTxt.setAttribute('class', 'reviewName');
 
-      msgTxt.textContent = review.reviewMsg
-      msgTxt.setAttribute('class', 'reviewMsg')
+    msgTxt.textContent = review.reviewMsg;
+    msgTxt.setAttribute('class', 'reviewMsg');
 
-      rating.textContent = review.rating
-      rating.setAttribute('class', 'reviewRating')
+    rating.textContent = review.rating;
+    rating.setAttribute('class', 'reviewRating');
 
-      dateTxt.textContent = review.reviewdate
-      dateTxt.setAttribute('class', 'dateTxt')
+    dateTxt.textContent = review.reviewdate;
+    dateTxt.setAttribute('class', 'dateTxt');
 
-
-
-      reviewDiv.appendChild(nameTxt)
-      reviewDiv.appendChild(dateTxt)
-      reviewDiv.appendChild(msgTxt)
-      reviewDiv.appendChild(rating)
-      getReviewsDiv.appendChild(reviewDiv)
-    })
+    reviewDiv.appendChild(nameTxt);
+    reviewDiv.appendChild(dateTxt);
+    reviewDiv.appendChild(msgTxt);
+    reviewDiv.appendChild(rating);
+    getReviewsDiv.appendChild(reviewDiv);
+  });
 }
 
-displayReviews()
+displayReviews();
 
 form.addEventListener('submit', handleBooking);
-reviewForm.addEventListener('submit', handleReview)
+reviewForm.addEventListener('submit', handleReview);
