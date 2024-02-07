@@ -238,6 +238,46 @@ option {
   margin-top: 1rem;
 }
 
+/* confirmation notice */
+
+.notice-div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  width: 70%;
+  max-width: 400px;
+}
+
+.notice-div p {
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.close-button {
+  width: 150px;
+  color: black;
+  padding: 5px;
+  background: rgb(191, 191, 191);
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  color: black;
+  background-color: rgb(162, 162, 162);
+}
+
 /* footer section */
 
 footer {

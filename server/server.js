@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.get('/booking', (req, res) => {
   try {
-    let bookings = deb.prepare(`SELECT * FROM bookings`).all();
+    let bookings = db.prepare(`SELECT * FROM bookings`).all();
     res.status(200).json(bookings);
   } catch (err) {
     res.status(500).json({ error: err });
