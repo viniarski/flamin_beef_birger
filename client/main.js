@@ -50,6 +50,10 @@ function displayConfirmation(bookings) {
   noticeDisplay.appendChild(noticeDiv);
   noticeDiv.appendChild(confirmationNotice);
   noticeDiv.appendChild(closeButton);
+
+  closeButton.addEventListener('click', function () {
+    noticeDiv.remove();
+  });
 }
 
 function handleReview(e) {
