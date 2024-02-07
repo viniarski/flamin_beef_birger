@@ -14,9 +14,36 @@ app.get('/', (req, res) => {
   res.status(200);
 });
 
+// POST REVIEWS
+app.post('/review', (req, res) => {
+  try {
+    const reviewName = req.body.reviews.reviewFormName
+    const reviewMsg = req.body.reviews.reviewMsg
+    const rating = req.body.reviews.rate
+    const date = req.body.date
+    console.log(reviewName, reviewMsg, rating, date)
+
+    const newReviews = db.prepare(`INSERT INTO reviews (name, reviewMsg, rating, reviewdate) VALUES (?, ?, ?, ?)`).run(reviewName, reviewMsg, rating, date);
+    console.log(newReviews)
+    res.status(200).json(newBooking);
+  } catch (err) {
+    res.status(500).json({error: err})
+  }
+})
+
+// GET REVIEWS
+app.get('/review', (req, res) => {
+  try {
+    let reviews = db.prepare(`SELECT * FROM reviews`).all();
+    res.status(200).json(reviews);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+})
+
 app.get('/booking', (req, res) => {
   try {
-    let bookings = deb.prepare(`SELECT * FROM bookings`).all();
+    let bookings = db.prepare(`SELECT * FROM bookings`).all();
     res.status(200).json(bookings);
   } catch (err) {
     res.status(500).json({ error: err });
@@ -33,11 +60,9 @@ app.post('/booking', (req, res) => {
     const date = req.body.bookings.date;
     // console.log(name, surname, phone, email, time, date)
 
-    const newBooking = db
-      .prepare(
+    const newBooking = db.prepare(
         `INSERT INTO bookings (name, surname, phoneNo, email, time, date) VALUES (?, ?, ?, ?, ?, ?)`
-      )
-      .run(name, surname, phone, email, time, date);
+      ).run(name, surname, phone, email, time, date);
 
     res.status(200).json(newBooking);
   } catch (err) {
