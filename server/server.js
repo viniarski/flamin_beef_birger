@@ -17,12 +17,13 @@ app.get('/', (req, res) => {
 // POST REVIEWS
 app.post('/review', (req, res) => {
   try {
-    const name = req.body.reviews.reviewName
+    const reviewName = req.body.reviews.reviewFormName
     const reviewMsg = req.body.reviews.reviewMsg
     const rating = req.body.reviews.rate
-    console.log(name, reviewMsg, rating)
+    const date = req.body.date
+    console.log(reviewName, reviewMsg, rating, date)
 
-    const newReviews = db.prepare(`INSERT INTO reviews (name, reviewMsg, rating) VALUES (?, ?, ?)`).run(name, reviewMsg, rating);
+    const newReviews = db.prepare(`INSERT INTO reviews (name, reviewMsg, rating, reviewdate) VALUES (?, ?, ?, ?)`).run(reviewName, reviewMsg, rating, date);
     console.log(newReviews)
     res.status(200).json(newBooking);
   } catch (err) {

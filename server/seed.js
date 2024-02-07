@@ -16,10 +16,11 @@ db.exec(`CREATE TABLE IF NOT EXISTS reviews (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     reviewMsg TEXT,
-    rating INTEGER
+    rating INTEGER,
+    reviewdate TEXT
 )`)
 
-db.exec(`INSERT INTO reviews (name, reviewMsg, rating) VALUES 
-    ('John Doe', 'Great food, great staff, great time', 5),
-    ('Jane Smith', 'Good establishment', 4)
+db.exec(`INSERT INTO reviews (name, reviewMsg, rating, reviewdate) VALUES 
+    ('John Doe', 'Great food, great staff, great time', 5, '5/2/2024'),
+    ('Jane Smith', 'Good establishment', 4, '1/2/2024')
     `)

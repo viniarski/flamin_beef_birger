@@ -10,11 +10,7 @@ function handleBooking(e) {
   const formData = new FormData(form);
   const bookings = Object.fromEntries(formData);
 
-  console.log(bookings);
-// ALERT VALIDATION
-//   if (bookings.name == '' || bookings.surname == '' || bookings.phone || bookings.email || bookings.) {
-//     alert('Please fill all of the entries to book.')
-//   }
+  // console.log(bookings);
 
   fetch(`${baseURL}/booking`, {
     method: 'POST',
@@ -31,15 +27,19 @@ function handleReview(e) {
     const formData = new FormData(reviewForm);
     const reviews = Object.fromEntries(formData);
 
-    console.log(reviews)
-
+    // GETTING DATE WHEN SUBMITTED
+    const submitDate = new Date()
+    const date = `${submitDate.getUTCDate()}/${(submitDate.getUTCMonth() + 1)}/${submitDate.getUTCFullYear()}`
+    
+    console.log(reviews, date)
     fetch(`${baseURL}/review`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ reviews })
+        body: JSON.stringify({ reviews, date })
     });
+    displayReviews()
 }
 
 // flamin' 🍔 hamburger menu!
@@ -80,6 +80,7 @@ async function displayReviews() {
       let nameTxt = document.createElement('h3')
       let msgTxt = document.createElement('p')
       let rating = document.createElement('p')
+      let dateTxt = document.createElement('p')
 
       reviewDiv.setAttribute('class', 'dbReviewDiv')
       nameTxt.textContent = review.name
@@ -91,9 +92,13 @@ async function displayReviews() {
       rating.textContent = review.rating
       rating.setAttribute('class', 'reviewRating')
 
+      dateTxt.textContent = review.reviewdate
+      dateTxt.setAttribute('class', 'dateTxt')
+
 
 
       reviewDiv.appendChild(nameTxt)
+      reviewDiv.appendChild(dateTxt)
       reviewDiv.appendChild(msgTxt)
       reviewDiv.appendChild(rating)
       getReviewsDiv.appendChild(reviewDiv)

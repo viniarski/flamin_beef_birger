@@ -196,10 +196,16 @@ h2 {
   border: #ffc700 solid 2px;
   border-radius: 1rem;
   padding: 0.2rem 0.5rem;
+  min-width: 7SVW;
 }
 
 .reviewName {
   text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.dateTxt {
+  font-size: 0.9rem;
 }
 
 .reviewMsg {
