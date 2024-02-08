@@ -23,10 +23,34 @@
       </div>
       <!-- top nav menu -->
       <nav class="top-nav-menu">
-        <a id="top-nav-2" class="top-nav" href="#about">about us</a>
-        <a class="top-nav" id href="#customerReview">Reviews</a>
-        <a id="top-nav-3" class="top-nav" href="#menu">menu</a>
-        <a id="top-nav-4" class="top-nav" href="#booking-section">booking</a>
+        <a
+          id="top-nav-2"
+          class="top-nav"
+          href="#about"
+          aria-label="about us nav button"
+          >about us</a
+        >
+        <a
+          class="top-nav"
+          id
+          href="#customerReview"
+          aria-label="revies nav button"
+          >reviews</a
+        >
+        <a
+          id="top-nav-3"
+          class="top-nav"
+          href="#menu"
+          aria-label="menu nav button"
+          >menu</a
+        >
+        <a
+          id="top-nav-4"
+          class="top-nav"
+          href="#booking-section"
+          aria-label="booking nav button"
+          >booking</a
+        >
       </nav>
       <!-- flamin' 🍔 hamburger menu -->
       <nav id="hamburger-nav">
@@ -36,10 +60,15 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about">about</a></li>
-          <li><a href="#menu">menu</a></li>
+          <li><a href="#about" aria-label="about us nav button">about</a></li>
           <li>
-            <a href="#booking-section">booking</a>
+            <a href="#customerReview" aria-label="revies nav button">reviews</a>
+          </li>
+          <li><a href="#menu" aria-label="menu nav button">menu</a></li>
+          <li>
+            <a href="#booking-section" aria-label="booking nav button"
+              >booking</a
+            >
           </li>
         </div>
       </nav>
@@ -52,7 +81,7 @@
         <div class="about-parent">
           <div class="about-div1"></div>
           <div class="about-div2">
-            <h2>about us</h2>
+            <h2 aria-label="about us section">about us</h2>
             <br />
             <p>
               Flamin' Beef Burger embodies the perfect union of passion and
@@ -84,7 +113,7 @@
 
       <!-- CUSTOMER REVIEW SECTION -->
       <section id="customerReview">
-        <h2>Customer Reviews</h2>
+        <h2 aria-label="customer reviews section">Customer Reviews</h2>
         <div id="reviewDiv">
           <div id="reviewFormDiv">
             <form id="reviewForm">
@@ -131,9 +160,7 @@
 
       <!-- menu section - gallery -->
 
-      <!-- menu section - gallery -->
-
-      <section id="menu" class="sec-3">
+      <section id="menu" class="sec-3" aria-label="menu us section">
         <div class="carousel-container">
           <img
             src="./public/assets/images/menu_item_1.png"
@@ -170,7 +197,7 @@
 
       <section id="booking-section" class="sec-4">
         <div>
-          <h2 class="title-booking">booking</h2>
+          <h2 class="title-booking" aria-label="booking section">booking</h2>
           <form id="booking" class="booking-form">
             <label for="name"></label>
             <input
@@ -179,6 +206,7 @@
               placeholder="Name"
               name="name"
               class="booking-input"
+              aria-label="your Name"
               required
             />
             <label for="surname"></label>
@@ -188,6 +216,7 @@
               placeholder="Surname"
               name="surname"
               class="booking-input"
+              aria-label="your Surname"
               required
             />
             <label for="phone"></label>
@@ -197,6 +226,7 @@
               placeholder="Phone number"
               name="phone"
               class="booking-input"
+              aria-label="your phone number"
               required
             />
             <label for="email"></label>
@@ -206,25 +236,61 @@
               placeholder="Email"
               name="email"
               class="booking-input"
+              aria-label="your email"
               required
             />
 
-            <select name="time" id="time" class="booking-input">
+            <select
+              name="time"
+              id="time"
+              class="booking-input"
+              aria-label="select booking time"
+              required
+            >
               <option value="0" disable selected>Time</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-              <option value="18:00">18:00</option>
-              <option value="18:30">18:30</option>
-              <option value="19:00">19:00</option>
-              <option value="19:30">19:30</option>
-              <option value="20:00">20:00</option>
+              <option value="16:00" aria-label="booking time 16:00">
+                16:00
+              </option>
+              <option value="16:30" aria-label="booking time 16:30">
+                16:30
+              </option>
+              <option value="17:00" aria-label="booking time 17:00">
+                17:00
+              </option>
+              <option value="17:30" aria-label="booking time 17:30">
+                17:30
+              </option>
+              <option value="18:00" aria-label="booking time 18:00">
+                18:00
+              </option>
+              <option value="18:30" aria-label="booking time 18:30">
+                18:30
+              </option>
+              <option value="19:00" aria-label="booking time 19:00">
+                19:00
+              </option>
+              <option value="19:30" aria-label="booking time 19:30">
+                19:30
+              </option>
+              <option value="20:00" aria-label="booking time 20:00">
+                20:00
+              </option>
             </select>
 
-            <input type="date" id="date" name="date" class="booking-input" />
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="booking-input"
+              required
+            />
             <div>
-              <button id="submit" type="submit" class="booking-submit">
+              <button
+                id="submit"
+                type="submit"
+                class="booking-submit"
+                aria-label="submit button"
+              >
                 Submit
               </button>
             </div>
@@ -267,14 +333,12 @@
         </div>
         <div class="footerTxt">
           <h2 class="footerHeaders">Food</h2>
-          <h3><a href="#">Menu</a></h3>
+          <h3><a href="#menu">Menu</a></h3>
           <h3><a href="#">Recipes</a></h3>
-          <h3><a href="#">Our Food</a></h3>
         </div>
         <div class="footerTxt">
           <h2 class="footerHeaders">Help</h2>
           <h3><a href="#">FAQs</a></h3>
-          <h3><a href="#">Restaurants</a></h3>
           <h3><a href="#">Contact Us</a></h3>
           <h3><a href="#">Sustainability</a></h3>
         </div>
@@ -283,9 +347,6 @@
           <h3><a href="#">Terms & Conditions</a></h3>
           <h3><a href="#">Privacy Policy</a></h3>
           <h3><a href="#">Cookies Poolicy</a></h3>
-          <h3><a href="#">Cookie Preferences</a></h3>
-          <h3><a href="#">Slavery Statement</a></h3>
-          <h3><a href="#">Insurance Policy Details</a></h3>
         </div>
       </div>
       <div id="flameDiv">
@@ -293,5 +354,11 @@
         <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
       </div>
     </footer>
+    <div
+      id="announcer"
+      role="status"
+      aria-live="polite"
+      class="visually_hidden"
+    ></div>
   </body>
 </html>
