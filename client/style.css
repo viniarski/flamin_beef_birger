@@ -514,6 +514,10 @@ footer a:hover {
 }
 
 @media (max-width: 1150px) {
+  .sec-1 {
+    background-position: 70%;
+  }
+
   .about-parent {
     display: grid;
     grid-template-columns: 1fr;
@@ -546,10 +550,40 @@ footer a:hover {
     top: 0;
     right: 0;
   }
+
+  .sec-4 {
+    display: block;
+    background-color: black;
+    background-size: cover;
+  }
+
+  .sec-4 p {
+    display: none;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    width: 80svw;
+    margin-left: 10%;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 640px) {
   .about-div1 {
     height: 40svh;
+  }
+
+  .booking-form {
+    margin-right: 10%;
+    margin-top: 1.8rem;
+  }
+
+  .title-booking {
+    margin-left: 10%;
+    margin-top: 10%;
+    color: black;
+    font-size: 1.6rem;
   }
 }
