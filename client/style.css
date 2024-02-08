@@ -444,6 +444,7 @@ footer {
   height: 50svh;
   margin: 0;
   border-top: rgb(225, 225, 225) solid 2px;
+  padding: 10px;
 }
 
 footer p {
@@ -461,11 +462,12 @@ footer p {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 footer img {
   display: block;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .flames {
@@ -568,6 +570,50 @@ footer a:hover {
     margin-left: 10%;
     margin-top: 2rem;
   }
+
+  .footerHeaders {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  footer a {
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+
+  footer {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #footerDetails {
+    gap: 3rem;
+    flex-direction: column;
+  }
+
+  #flameDiv {
+    position: relative;
+    bottom: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #flameDiv p {
+    top: -10px;
+    font-weight: bold;
+  }
+
+  footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0;
+  }
   /* REVIEW SECTION */
 
   #reviewDiv {
@@ -619,6 +665,23 @@ footer a:hover {
     margin-top: 10%;
     color: black;
     font-size: 1.6rem;
+  }
+
+  #flameDiv {
+    position: relative;
+    bottom: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #maps {
+    position: relative;
+    border-radius: 1rem;
+    width: 350px;
+    margin-top: 30px;
+    border-radius: 1rem;
+    border: 3px solid white;
+    margin-bottom: 1rem;
   }
 
 }
