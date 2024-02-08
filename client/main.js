@@ -144,3 +144,31 @@ displayReviews();
 
 form.addEventListener('submit', handleBooking);
 reviewForm.addEventListener('submit', handleReview);
+
+// menu gallery
+
+const images = document.querySelectorAll('.carousel-image');
+const totalImages = images.length;
+let currentIndex = 0;
+
+function showImage(index) {
+  images.forEach((image) => {
+    image.style.display = 'none';
+  });
+  images[index].style.display = 'block';
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % totalImages;
+  showImage(currentIndex);
+}
+
+function previousImage() {
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+  showImage(currentIndex);
+}
+
+document.getElementById('next').addEventListener('click', nextImage);
+document.getElementById('previous').addEventListener('click', previousImage);
+
+showImage(currentIndex);

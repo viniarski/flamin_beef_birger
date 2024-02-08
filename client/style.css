@@ -115,7 +115,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
-
   width: 100vw;
   height: 100vh;
 }
@@ -264,53 +263,46 @@ textarea {
 
 /* menu section */
 
-.sec-3 {
-  background-color: black;
+.carousel-container {
+  position: relative;
+  width: 100svw;
   height: 100svh;
+  overflow: hidden;
 }
 
-.img-gallery {
-  width: 80%;
-  margin: 5px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
-}
-.img-gallery img {
-  width: 100%;
-  height: 80%;
-  cursor: pointer;
-}
-
-.img-gallery img:hover {
-  transform: scale(0.8) rotate(-15deg);
-  border-radius: 20px;
-  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-}
-.full-img {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
+.carousel-image {
   display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-.full-img img {
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
 }
 
-.full-img span {
+.nav_button {
   position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 30px;
-  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background: none;
+  border: none;
   cursor: pointer;
+  overflow: hidden;
+  margin: 5%;
+}
+
+.previous {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.nav_button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* booking section */
@@ -627,7 +619,10 @@ footer a:hover {
     justify-content: center;
   }
 
-  #reviewForm input, textarea, button, h3{
+  #reviewForm input,
+  textarea,
+  button,
+  h3 {
     font-size: 1.75rem;
     padding: 0.5rem 1rem;
   }
@@ -636,7 +631,7 @@ footer a:hover {
     height: 60px;
   }
 
-  .rate:not(:checked) > label{
+  .rate:not(:checked) > label {
     font-size: 50px;
   }
 
