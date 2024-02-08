@@ -568,6 +568,40 @@ footer a:hover {
     margin-left: 10%;
     margin-top: 2rem;
   }
+  /* REVIEW SECTION */
+
+  #reviewDiv {
+    height: 90%;
+  }
+
+  #reviewFormDiv {
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #reviewForm input, textarea, button, h3{
+    font-size: 1.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .rate {
+    height: 60px;
+  }
+
+  .rate:not(:checked) > label{
+    font-size: 50px;
+  }
+
+  #getReviewsDiv {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .dbReviewDiv {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -586,4 +620,5 @@ footer a:hover {
     color: black;
     font-size: 1.6rem;
   }
+
 }
