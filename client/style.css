@@ -684,4 +684,11 @@ footer a:hover {
     margin-bottom: 1rem;
   }
 
+  #customerReview {
+    height: 120svh;
+  }
+
+  #reviewDiv {
+    flex-direction: column;
+  }
 }
