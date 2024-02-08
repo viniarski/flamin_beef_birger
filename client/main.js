@@ -1,6 +1,7 @@
 const form = document.getElementById('booking');
 const reviewForm = document.getElementById('reviewForm');
-const baseURL = 'http://localhost:8080';
+// const baseURL = 'http://localhost:8080';
+const baseURL = import.meta.env.VITE;
 const getReviewsDiv = document.getElementById('getReviewsDiv');
 
 function handleBooking(e) {
