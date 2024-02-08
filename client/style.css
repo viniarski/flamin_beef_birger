@@ -123,7 +123,7 @@
 
 .sec-2 {
   background-color: rgb(55, 55, 55);
-  height: 67svh;
+  height: 100svh;
 }
 
 .about-parent {
@@ -138,8 +138,8 @@
   grid-area: 1 / 1 / 2 / 2;
   background-image: url('./public/assets/images/about.avif');
   background-size: cover;
-  background-position: center;
-  height: 100%;
+  background-position: 50%;
+  height: 100svh;
 }
 .about-div2 {
   grid-area: 1 / 2 / 2 / 3;
@@ -507,24 +507,27 @@ footer a:hover {
   margin-bottom: 1rem;
 }
 
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @media (max-width: 1150px) {
   .sec-1 {
     background-position: 70%;
   }
 
-  .about-parent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
-
-  .about-div1 {
-    grid-area: 1 / 1 / 2 / 2;
-    height: 75svh;
-  }
   .about-div2 {
-    grid-area: 2 / 1 / 3 / 2;
+    padding: 1.5rem;
+  }
+  .about-div2 h2 {
+    font-size: 1rem;
   }
 
   .top-nav-menu {
@@ -566,7 +569,7 @@ footer a:hover {
   .footerHeaders {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
     font-size: 0.8rem;
   }
 
@@ -602,10 +605,17 @@ footer a:hover {
   }
 
   footer a {
-    font-size: 1rem;
+    font-size: 0.5rem;
     text-decoration: none;
     margin: 0;
   }
+
+  .footerTxt h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+
   /* REVIEW SECTION */
 
   #reviewDiv {
@@ -645,9 +655,31 @@ footer a:hover {
   }
 }
 
+@media (max-width: 920px) {
+  .about-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .about-div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 40svh;
+  }
+  .about-div2 {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 640px) {
   .about-div1 {
     height: 40svh;
+  }
+
+  .about-div2 p {
+    font-size: smaller;
   }
 
   .booking-form {
