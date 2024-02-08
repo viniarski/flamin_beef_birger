@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CEO -->
+    <meta
+      name="description"
+      content="Welcome to Flamin' Beef Burger, where we specialize in serving up mouthwatering, fresh burgers that are sure to tantalize your taste buds. Our restaurant is dedicated to delivering an unforgettable dining experience, featuring a delectable selection of flame-grilled beef burgers crafted with the finest ingredients. From classic cheeseburgers to gourmet creations, each bite is bursting with flavor and quality. Join us for a culinary journey that celebrates the art of the perfect burger. Savor the taste of perfection at Flamin' Beef Burger today!"
+    />
+    <!-- favicon -->
     <link
       rel="shortcut icon"
       href="./public/assets/graphics/favicon.ico"
@@ -120,6 +126,7 @@
               <h3>Leave a review!</h3>
               <label for="reviewFormName"></label>
               <input
+                id="reviewFormName"
                 type="text"
                 name="reviewFormName"
                 class="reviewFormName"
@@ -163,18 +170,18 @@
       <section id="menu" class="sec-3" aria-label="menu us section">
         <div class="carousel-container">
           <img
-            src="./public/assets/images/menu_item_1.png"
+            src="./public/assets/images/menu_item_1.webp"
             alt="burger menu 1"
             class="carousel-image"
             style="display: block"
           />
           <img
-            src="./public/assets/images/menu_item_2.png"
+            src="./public/assets/images/menu_item_2.webp"
             alt="burger menu 2"
             class="carousel-image"
           />
           <img
-            src="./public/assets/images/menu_item_3.png"
+            src="./public/assets/images/menu_item_3.webp"
             alt="burger menu 3"
             class="carousel-image"
           />
@@ -282,6 +289,7 @@
               id="date"
               name="date"
               class="booking-input"
+              aria-label="date booking"
               required
             />
             <div>
@@ -311,6 +319,7 @@
       <div id="footerDetails">
         <iframe
           id="maps"
+          title="google maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.3476528610902!2d1.2908591262580549!3d52.63002111216108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3a1becaa7a1%3A0x7fb341a9b7b7daa!2sTech%20Educators%20Ltd!5e1!3m2!1sen!2suk!4v1707141285983!5m2!1sen!2suk"
           style="border: 0"
           allowfullscreen=""
@@ -351,7 +360,11 @@
       </div>
       <div id="flameDiv">
         <p>Flamin' Beef Burger<br />All Rights Reserved.&copy; 2024</p>
-        <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
+        <img
+          src="./public/assets/graphics/bottom-flames.png"
+          alt="flames"
+          class="flames"
+        />
       </div>
     </footer>
     <div
