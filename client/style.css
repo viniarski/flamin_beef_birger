@@ -618,8 +618,8 @@ footer a:hover {
 
   /* REVIEW SECTION */
 
-  #reviewDiv {
-    height: 90%;
+  #customerReview {
+    height: 75svh;
   }
 
   #reviewFormDiv {
@@ -713,6 +713,10 @@ footer a:hover {
 
   #customerReview {
     height: 120svh;
+  }
+
+  #customerReview h2 {
+    font-size: 2rem;
   }
 
   #reviewDiv {
