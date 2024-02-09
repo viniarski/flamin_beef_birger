@@ -1,7 +1,7 @@
 const form = document.getElementById('booking');
 const reviewForm = document.getElementById('reviewForm');
-const baseURL = 'https://flamin-beef-burger-server.onrender.com';
-// const baseURL = import.meta.env.VITE_ServerURL;
+// const baseURL = 'https://flamin-beef-burger-server.onrender.com';
+const baseURL = import.meta.env.VITE_ServerURL;
 const getReviewsDiv = document.getElementById('getReviewsDiv');
 
 function handleBooking(e) {
