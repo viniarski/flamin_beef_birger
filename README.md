@@ -4,8 +4,8 @@ Week project by Michal, Yonas & Mauro
 - As a user, I want to book a timeslot for the retaurant through a form.
 - As a user, I want confirmation that the booking has been successful.
 - As a user, I want to look at my confirmed bookings.
-- As a user, I want to be able to leave reviews on the website
-- As a user, I want to see past reviews on the website
+- As a user, I want to be able to leave reviews on the application
+- As a user, I want to see past reviews on the application
 
 Check what we did and how we did it!
 
