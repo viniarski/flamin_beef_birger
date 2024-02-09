@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CEO -->
+    <meta
+      name="description"
+      content="Welcome to Flamin' Beef Burger, where we specialize in serving up mouthwatering, fresh burgers that are sure to tantalize your taste buds. Our restaurant is dedicated to delivering an unforgettable dining experience, featuring a delectable selection of flame-grilled beef burgers crafted with the finest ingredients. From classic cheeseburgers to gourmet creations, each bite is bursting with flavor and quality. Join us for a culinary journey that celebrates the art of the perfect burger. Savor the taste of perfection at Flamin' Beef Burger today!"
+    />
+    <!-- favicon -->
     <link
       rel="shortcut icon"
       href="./public/assets/graphics/favicon.ico"
@@ -23,10 +29,34 @@
       </div>
       <!-- top nav menu -->
       <nav class="top-nav-menu">
-        <a id="top-nav-2" class="top-nav" href="#about">about us</a>
-        <a class="top-nav" id href="#customerReview">Reviews</a>
-        <a id="top-nav-3" class="top-nav" href="#menu">menu</a>
-        <a id="top-nav-4" class="top-nav" href="#booking-section">booking</a>
+        <a
+          id="top-nav-2"
+          class="top-nav"
+          href="#about"
+          aria-label="about us nav button"
+          >about us</a
+        >
+        <a
+          class="top-nav"
+          id
+          href="#customerReview"
+          aria-label="revies nav button"
+          >reviews</a
+        >
+        <a
+          id="top-nav-3"
+          class="top-nav"
+          href="#menu"
+          aria-label="menu nav button"
+          >menu</a
+        >
+        <a
+          id="top-nav-4"
+          class="top-nav"
+          href="#booking-section"
+          aria-label="booking nav button"
+          >booking</a
+        >
       </nav>
       <!-- flamin' 🍔 hamburger menu -->
       <nav id="hamburger-nav">
@@ -52,7 +82,7 @@
         <div class="about-parent">
           <div class="about-div1"></div>
           <div class="about-div2">
-            <h2>about us</h2>
+            <h2 aria-label="about us section">about us</h2>
             <br />
             <p>
               Flamin' Beef Burger embodies the perfect union of passion and
@@ -84,13 +114,14 @@
 
       <!-- CUSTOMER REVIEW SECTION -->
       <section id="customerReview">
-        <h2>Customer Reviews</h2>
+        <h2 aria-label="customer reviews section">Customer Reviews</h2>
         <div id="reviewDiv">
           <div id="reviewFormDiv">
             <form id="reviewForm">
               <h3>Leave a review!</h3>
               <label for="reviewFormName"></label>
               <input
+                id="reviewFormName"
                 type="text"
                 name="reviewFormName"
                 class="reviewFormName"
@@ -131,32 +162,36 @@
 
       <!-- menu section - gallery -->
 
-      <section id="menu" class="sec-3">
-        <div class="img-gallery">
+      <section id="menu" class="sec-3" aria-label="menu us section">
+        <div class="carousel-container">
           <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/1.jpg"
+            src="./public/assets/images/menu_item_1.webp"
+            alt="burger menu 1"
+            class="carousel-image"
+            style="display: block"
           />
           <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/2.jpg"
+            src="./public/assets/images/menu_item_2.webp"
+            alt="burger menu 2"
+            class="carousel-image"
           />
           <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/33.jpg"
+            src="./public/assets/images/menu_item_3.webp"
+            alt="burger menu 3"
+            class="carousel-image"
           />
-          <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/6.jpg"
-          />
-          <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/5.jpg"
-          />
-          <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/7.jpg"
-          />
-          <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/77.jpg"
-          />
-          <img
-            src="https://raw.githubusercontent.com/viniarski/flamin_beef_burger/607f84a5abd207dfaeb4e570da72d47807591d31/client/images/img.project/8.jpg"
-          />
+          <button id="previous" class="nav_button previous">
+            <img
+              src="./public/assets/graphics/previous.png"
+              alt="Previous image button"
+            />
+          </button>
+          <button id="next" class="nav_button next">
+            <img
+              src="./public/assets/graphics/next.png"
+              alt="Next image button"
+            />
+          </button>
         </div>
       </section>
 
@@ -164,7 +199,7 @@
 
       <section id="booking-section" class="sec-4">
         <div>
-          <h2 class="title-booking">booking</h2>
+          <h2 class="title-booking" aria-label="booking section">booking</h2>
           <form id="booking" class="booking-form">
             <label for="name"></label>
             <input
@@ -173,6 +208,7 @@
               placeholder="Name"
               name="name"
               class="booking-input"
+              aria-label="your Name"
               required
             />
             <label for="surname"></label>
@@ -182,6 +218,7 @@
               placeholder="Surname"
               name="surname"
               class="booking-input"
+              aria-label="your Surname"
               required
             />
             <label for="phone"></label>
@@ -191,6 +228,7 @@
               placeholder="Phone number"
               name="phone"
               class="booking-input"
+              aria-label="your phone number"
               required
             />
             <label for="email"></label>
@@ -200,25 +238,62 @@
               placeholder="Email"
               name="email"
               class="booking-input"
+              aria-label="your email"
               required
             />
 
-            <select name="time" id="time" class="booking-input">
+            <select
+              name="time"
+              id="time"
+              class="booking-input"
+              aria-label="select booking time"
+              required
+            >
               <option value="0" disable selected>Time</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-              <option value="18:00">18:00</option>
-              <option value="18:30">18:30</option>
-              <option value="19:00">19:00</option>
-              <option value="19:30">19:30</option>
-              <option value="20:00">20:00</option>
+              <option value="16:00" aria-label="booking time 16:00">
+                16:00
+              </option>
+              <option value="16:30" aria-label="booking time 16:30">
+                16:30
+              </option>
+              <option value="17:00" aria-label="booking time 17:00">
+                17:00
+              </option>
+              <option value="17:30" aria-label="booking time 17:30">
+                17:30
+              </option>
+              <option value="18:00" aria-label="booking time 18:00">
+                18:00
+              </option>
+              <option value="18:30" aria-label="booking time 18:30">
+                18:30
+              </option>
+              <option value="19:00" aria-label="booking time 19:00">
+                19:00
+              </option>
+              <option value="19:30" aria-label="booking time 19:30">
+                19:30
+              </option>
+              <option value="20:00" aria-label="booking time 20:00">
+                20:00
+              </option>
             </select>
 
-            <input type="date" id="date" name="date" class="booking-input" />
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="booking-input"
+              aria-label="date booking"
+              required
+            />
             <div>
-              <button id="submit" type="submit" class="booking-submit">
+              <button
+                id="submit"
+                type="submit"
+                class="booking-submit"
+                aria-label="submit button"
+              >
                 Submit
               </button>
             </div>
@@ -236,13 +311,10 @@
     </main>
 
     <footer>
-      <div id="flameDiv">
-        <p>Flamin' Beef Burger<br />All Rights Reserved.&copy; 2024</p>
-        <img src="./public/assets/graphics/bottom-flames.png" class="flames" />
-      </div>
       <div id="footerDetails">
         <iframe
           id="maps"
+          title="google maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.3476528610902!2d1.2908591262580549!3d52.63002111216108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3a1becaa7a1%3A0x7fb341a9b7b7daa!2sTech%20Educators%20Ltd!5e1!3m2!1sen!2suk!4v1707141285983!5m2!1sen!2suk"
           style="border: 0"
           allowfullscreen=""
@@ -265,14 +337,12 @@
         </div>
         <div class="footerTxt">
           <h2 class="footerHeaders">Food</h2>
-          <h3><a href="#">Menu</a></h3>
+          <h3><a href="#menu">Menu</a></h3>
           <h3><a href="#">Recipes</a></h3>
-          <h3><a href="#">Our Food</a></h3>
         </div>
         <div class="footerTxt">
           <h2 class="footerHeaders">Help</h2>
           <h3><a href="#">FAQs</a></h3>
-          <h3><a href="#">Restaurants</a></h3>
           <h3><a href="#">Contact Us</a></h3>
           <h3><a href="#">Sustainability</a></h3>
         </div>
@@ -281,11 +351,22 @@
           <h3><a href="#">Terms & Conditions</a></h3>
           <h3><a href="#">Privacy Policy</a></h3>
           <h3><a href="#">Cookies Poolicy</a></h3>
-          <h3><a href="#">Cookie Preferences</a></h3>
-          <h3><a href="#">Slavery Statement</a></h3>
-          <h3><a href="#">Insurance Policy Details</a></h3>
         </div>
       </div>
+      <div id="flameDiv">
+        <p>Flamin' Beef Burger<br />All Rights Reserved.&copy; 2024</p>
+        <img
+          src="./public/assets/graphics/bottom-flames.png"
+          alt="flames"
+          class="flames"
+        />
+      </div>
     </footer>
+    <div
+      id="announcer"
+      role="status"
+      aria-live="polite"
+      class="visually_hidden"
+    ></div>
   </body>
 </html>
